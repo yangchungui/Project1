@@ -1,0 +1,245 @@
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+h3{font-weight: normal;}
+img {
+	border: 0;
+}
+ul{list-style: none;}
+input {
+	display: inline-block;
+}
+.goods{
+	width: 100%;
+	height: 690px;
+}
+.goods .left{
+	width:530px ;
+	height: 650px;
+	margin-left: 27px;
+	padding: 20px 106px;
+	float: left;
+}
+.goods .left #imgs-top{
+	/*width: 100%;
+	height: 557px;*/
+	width: 400px;
+	height: 470px;
+	background-image:url(../img/100.jpg);
+	background-size: 400px 470px;
+	position: relative;
+	/*background: red;*/
+	/*opacity: 0.5;*/
+	/*background-size:500px 340px ;*/
+}
+.goods .left #smallBox{
+		width: 100px;
+		height: 80px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.5;
+		background-color: darkgray;
+		display: none;
+		cursor: move;		
+	}
+.goods .left	#bigBox{
+		width: 400px;
+		height: 470px;
+		position: absolute;
+		left: 410px;
+		top: 0;
+		/*background-color: gold;*/
+		/*opacity: 0.9;*/
+		background-image: url(../img/100.jpg);
+		
+	/*background-size: cover;*/
+		background-size:800px 940px;
+		/*background-position:-125px -120px;*/
+		display: none;
+	}
+.goods .left	ul li{
+		list-style: none;
+		float: left;
+		width: 100px;
+		height: 140px;
+		margin-right: 10px;
+		background-size: cover;
+	}
+.goods .left	ul li:nth-child(1) {
+			background-image: url(../img/100.jpg);
+	background-size: cover;
+		}
+.goods .left	ul li:nth-child(2) {
+			background-image: url(../img/101.jpg);
+	background-size: cover;
+		}
+.goods .left	ul li:nth-child(3) {
+			background-image: url(../img/102.jpg);
+	background-size: cover;
+		}
+.goods .left	ul li:nth-child(4) {
+			background-image: url(../img/103.jpg);
+	background-size: cover;
+		}
+.goods .left .imgList{
+	width: 100%;
+	height:93px;
+}
+.goods .right{
+	width: 437px;
+	float: left;
+	margin-bottom: 143px;
+	/*background-color: goldenrod;*/
+}
+.goods .right .font{
+	font-size: 24px;
+    color: #222;
+    margin-top: 20px;
+        margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.goods .right .small{
+	display: block;
+	width: 100%;
+	height: 17px;
+	font-size: 12px;
+    color: #222;
+    margin-top: 10px;
+}
+.goods .right .small span:first-child{
+	float: left;
+}
+.goods .right .small span:last-child{
+	float: right;
+	    margin-right: 10px;
+}
+.goods .right .small-font{
+	color: #888;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    clear: both;
+}
+.goods .right .price{
+	width: 100%;
+	height: 21px;
+	display: block;
+	font-size: 14px;
+    margin-top: 10px;
+}
+.goods .right .price span:first-child{
+	float: left;
+}
+.goods .right .price span:last-child{
+	width: 66px;
+	float: right;
+    font-size: 12px;
+    color: #737373;
+    cursor: pointer;
+    position: relative;
+}
+.goods .right .price span:last-child .ma{
+	width: 100px;
+	height: 100px;
+	/*display: inline-block;*/
+	display: none;
+	
+    position: absolute;
+    left: -35px;
+    top: 10px;
+}
+.goods .right .price span:last-child:hover .ma img{
+	width: 100px;
+	height: 100px;
+}
+.goods .right .price span:last-child:hover .ma{
+	display: inline-block;
+}
+.goods .right h5 hr{
+	margin-top: 20px ;
+	margin-bottom: 20px ;
+}
+
+.goods .right .color p{
+	font-size: 12px;
+    color: #222;
+    line-height: 1;
+}
+.goods .right .color button{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 0;
+	outline: none;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.goods .right .size{
+	font-size: 12px;
+    margin-top: 10px;
+   	height: 40px;
+}
+.goods .right .size button{
+	width: 64px;
+	height: 30px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.goods .right .size p{float: left;    line-height: 50px;
+    height: 50px;}
+.goods .right .size #btn1{float: left;vertical-align: middle;}
+.goods .right .num1{
+	font-size: 12px;
+    margin-top: 20px;
+    clear: both;
+}
+.goods .right .num1 #num1{
+	text-indent: 10px;
+	display: inline-block;
+    vertical-align: middle;
+    width: 102px;
+    height: 30px;
+    border: 1px solid #DFDFDF;
+}
+.goods .right .select{
+	width: 100%;
+	height: 48px;
+}
+.goods .right .select #btn2:first-child{
+	width: 160px;
+	font-size: 14px;
+    margin-top: 10px;
+    float: left;
+    line-height: 38px;
+    padding: 0 12px;
+    margin-left: 30px;
+    border: 0;
+    font-weight: 400;
+}
+.goods .right .select #btn2:last-child{
+	width: 160px;
+	font-size: 14px;
+    margin-top: 10px;
+    float: right;
+    line-height: 38px;
+    padding: 0 12px;
+    margin-right: 30px;
+    /*background-color: black;*/
+    /*color: white;*/
+    border: 0;
+    font-weight: 400;
+}
+.goods .right .common{
+	height: 17px;
+	font-size: 12px;
+	width: 100%;
+}

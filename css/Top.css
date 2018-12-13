@@ -1,0 +1,380 @@
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+h3{font-weight: normal;}
+img {
+	border: 0;
+}
+ul{list-style: none;}
+input {
+	display: inline-block;
+}
+/*body{overflow-x: hidden;}*/
+/*导航*/
+.Top1{overflow: hidden;}
+header {
+	height: 140px;
+	width: 100%;
+	background-color: #FFFFFF;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99;	
+}
+.Top1 header .top{
+	overflow: hidden;
+}
+/*消除顶部固定定位脱离文档流产生的影响*/
+.fixed-header{
+	height: 140px;
+	width: 100%;
+}
+header{
+	height: 97px;
+}
+
+header .tt {
+	float: left;
+	line-break: 97px;
+}
+
+header .head_topleft {
+	width: 242px;
+	height: 97px;
+	line-height: 97px;
+	padding: 0 36px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	color: #888;
+}
+
+header .head_topleft .imgs {
+	margin-right: 14px;
+}
+
+header .head_con {
+	width: 680px;
+	height: 97px;
+	line-height: 97px;
+}
+
+header .head_topright {
+	margin-left: 0px;
+	width: 190px;
+	height: 97px;
+	line-height: 97px;
+	padding: 0 36px;
+	display: inline-block;
+	font-size: 12px;
+	color: #222;
+	vertical-align: middle;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 112px;
+}
+
+header .welcomeBox {
+	margin-left: 0px;
+	width: 230px;
+	height: 97px;
+	line-height: 97px;
+	/*padding: 0 36px;*/
+	display: inline-block;
+	font-size: 12px;
+	color: #222;
+	vertical-align: middle;
+	position: absolute;
+	top: 0;
+	right: 156px;
+	display: none;
+}
+header .welcomeBox #btnOut{
+	margin-left: 10px;
+    margin-right: 10px;
+}
+header .welcomeBox .imgs {
+	width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+header .head_topright .deng{
+	margin-left: 30px;
+}
+
+
+header .head_con img {
+	width: 241px;
+	height: 38px;
+	margin: 32px 220px;
+}
+
+header .nav {
+	height: 43px;
+	margin-left: 330px;
+	float: left;
+}
+
+header .both{
+	display: inline-block;
+	width: 250px;
+	height: 30px;
+	position: relative;
+	margin-left: 20px;
+}
+header .nav_right {
+	vertical-align: middle;
+	line-height: 30px;
+	display: inline-block;
+	font-size: 12px;
+	color: #888;
+	height: 30px;
+	padding-right: 30px;
+	padding-left: 8px;
+	width: 210px;
+	outline: 0;
+	border: 1px solid #efefef;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+header .both .imgs {
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 165px;
+	position: absolute;
+	top: 8px;
+    left: 60px;
+    outline: 0;
+    border: 0;
+}
+
+header .nav a {
+	display: inline-block;
+	height: 34px;
+	padding: 0 22px;
+	line-height: 40px;
+}
+
+header .nav .bian:hover {
+	border-bottom: 3px solid #000000;
+}
+
+
+/*下拉菜单*/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.bottom {
+	position: relative;
+	z-index: 1;
+	color: #ffffff;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.nav .m {
+	float: left;
+	display: inline-block;
+	text-align: center;
+}
+.nav .m .bian{
+	height: 40px;
+}
+.nav .sub {
+	display: none;
+	width: 1200px;
+	/*height: 350px;*/
+	position: absolute;
+	top: 43px;
+	background: #ffffff;
+	float: left;
+	/*line-height: 15px;*/
+	font-size: 15px;
+}
+
+.nav .sub dl {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: top;
+	/*line-height: 16px;*/
+	margin-bottom: 20px;
+}
+
+.nav .sub dt {
+	font-size: 14px;
+    color: #222;
+    font-weight: bolder;
+    line-height: 1.4;
+}
+.nav .sub dd {
+	font-size: 12px;
+    color: #7D7D7D;
+    line-height: 1.4;
+}
+.nav .sub img {
+	
+    float: right;
+	/*margin: 10px 80px;*/
+	width: 484px;
+	height: 290px;
+}
+
+.nav .sub .left {
+	float: left;
+	text-align: left;
+	margin-left: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.nav .sub .cen {
+	margin-top: 10px;
+}
+.nav .sub .right {
+	float: right;
+	width: 484px;
+	height: 290px;
+	overflow: hidden;
+	text-align: right;
+	margin-right: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.nav #m1 .sub {
+	z-index: 1;
+	width: 1080px;
+	height: 330px;
+	left: 134px;
+	top: 43px;
+	/*display: none;*/
+}
+
+
+/*子级导航栏*/
+
+.first {
+	width: 100%;
+	height: 81px;
+	background-color: #000000;
+	text-align: center;
+	line-height: 81px;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+/*消除顶部固定定位脱离文档流产生的影响*/
+.fixed-first{
+	width: 100%;
+	height:130px;
+	display: none;
+}
+.first .head_con img {
+	width: 241px;
+	height: 38px;
+	margin: -12px 125px;
+}
+
+.tt {
+	float: left;
+}
+
+.inpu input {
+	text-indent: 10px;
+	border: 0;
+	width: 366px;
+	height: 30px;
+	outline:none ;
+}
+.inpu #img{
+	border: 7px solid white;
+	margin-left: -6px;
+	margin-top: 3px;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+}
+.inpu {
+	color: #ffffff;
+	border-right: none;
+	outline: none;
+	outline-style: none;
+}
+
+.inpu img {
+	background-color: #FFFFFF;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.first .head_topright{
+	position: absolute;
+	top: 0;
+	right: 195px;
+}
+
+.first .head_topright .deng{
+	margin-left: 30px;
+}
+
+.first .head_topright a {
+	color: white;
+	font-size: 16px;
+}
+
+.first .welcomeBox{
+	margin-left: 36px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+	top: 0;
+	right: 50px;
+    display: none;
+}
+
+.first .welcomeBox #btnOut{
+	margin-left: 50px;
+    margin-right: 50px;
+}
+
+.first .welcomeBox .imgs{
+    margin-right: 50px;
+}
+
+.first .head_con a {
+	width: 241px;
+	height: 38px;
+}
+
+
+/*.first .head_con>img{width: 241px;height:38px ;margin-top: 25px;}*/
+
+.first .head_topright .imgs {
+	margin-left: 40px;
+	margin-right: 48px;
+}
+
+.head_topright {
+	margin-left: 100px;
+}

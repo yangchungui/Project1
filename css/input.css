@@ -1,0 +1,298 @@
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+h3{font-weight: normal;}
+img {
+	border: 0;
+}
+ul{list-style: none;}
+input {
+	display: inline-block;
+}
+/*body{background-color: #626262;}*/
+/*#box{
+	width: 1365px;
+	height: 705px;
+	background: grey;
+	opacity: 0.5;
+	
+	display: none;
+}*/
+.box{
+	width: 480px;
+	height: 632px;
+	margin: 33px 434.5px;
+	background-color:#FFFFFF;
+	opacity: 1;
+	
+}
+.modal-content .modal-header{
+	width: 418px;
+	height: 120px;
+	padding: 15px 30px;
+}
+.modal-content .close{
+	margin-right: 10px;
+    margin-top: 2px;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    float: right;
+    font-size: 21px;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    font-weight: 700;
+}
+.modal-content .modal-title{
+	font-size: 22px;
+    text-align: center;
+    padding-top: 35px;
+    margin: 0;
+    line-height: 1.42857143;
+    font-weight: 500;
+}
+.modal-content .divider{
+	display: table;
+    text-align: center;
+    background: 0 0;
+    font-weight: 500;
+    color: rgba(0,0,0,.85);
+    font-size: 16px;
+    margin: 16px 0;
+    height: 1px;
+    width: 100%;
+}
+.modal-content .divider-inner-text span{display: inline-block; width: 197px;}
+.modal-content .divider-inner-text .divider-logo{display: inline-block;}
+.modal-body{
+	width: 418px;
+	height: 450px;
+	padding: 15px 30px;
+	font-size: 14px;
+    line-height: 1.42857143;
+    position: relative;
+}
+.modal-body #accountLogin{
+	width: 418px;
+	height: 180px;
+	display: none;
+}
+
+.modal-body #phoneLogin{
+	width: 418px;
+	height: 180px;
+}
+.modal-body #phoneLogin .form-group, .modal-body #accountLogin .form-group{
+	width: 418px;
+	height: 43px;
+	margin-bottom: 30px;
+	position: relative;
+}
+.modal-body #phoneLogin .form-group .material-input{
+	height: 40px;
+	width: 100%;
+	text-indent: 8px;
+}
+.modal-body #phoneLogin .form-group .stepPhone1{
+	position: absolute;
+    top: -8px;
+    left: -3px;
+    width: 397px;
+    height: 36px;
+    font-size: 12px;
+    display: none;
+}
+.modal-body #phoneLogin .form-group #userSpan{
+	
+    position: absolute;
+    left: 16px;
+    top: 44px;
+}
+.modal-body #phoneLogin .form-group .stepPhone1 #stepPhoneTrue{
+	display:inline-block;
+	width: 6px;
+	height: 6px;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    margin-left: -10px;
+}
+.modal-body #phoneLogin .form-group .stepPhone1 .stepPhone{
+	height: 32px;
+    width: 395px;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    outline: none;
+    border: 0;
+}
+/*.modal-body #phoneLogin .form-group .stepPhone1 #stepPhoneTrue{
+	 
+	width: 30px;
+	height: 30px;
+	margin-top: 32px;
+	margin-left: 360px;
+	font-size: 18px;
+	color: black;
+}*/
+.modal-body #phoneLogin .form-group .help-block{display: none;}
+.modal-body #phoneLogin .form-group .material-lable{
+	position: absolute;
+	left: 7px;
+	top: 10px;
+	padding: 0 5px;
+	font-weight: 400;
+	z-index: 10;
+	color: #999;
+}
+.modal-body #phoneLogin .form-group .btn-get-code{
+	position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 43px;
+    margin-right: -3px;
+}
+.modal-body #phoneLogin.form-group .material-lable{
+	position: absolute;
+	left: 7px;
+	top: 10px;
+	padding: 0 5px;
+	font-weight: 400;
+	z-index: 10;
+	color: #999;
+}
+.modal-body  #phoneLogin .form-group .feedback-img{
+	width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    display: none;
+}
+.modal-body  #accountLogin .form-group img{
+	width: 20px;
+    height: 20px;
+}
+.modal-body  #phoneLogin .form-group img{
+	width: 20px;
+    height: 20px;
+}
+.modal-body  #phoneLogin .slider-desc{
+	color: gray;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 40px;
+    background-color: gainsboro;
+    line-height: 40px;
+    text-align: center;
+    
+}
+.modal-body  #phoneLogin .verification-slider{
+	position: relative;
+	 width: 418px;
+    height: 40px;
+        margin-bottom: 30px;
+}
+.modal-body  #phoneLogin .movebg{
+    vertical-align: middle;
+    background-color: skyblue;
+    color: black;
+    width: 0px;
+    height: 40px;
+    /*z-index: 2;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-indent: 140px;
+    white-space: nowrap;
+    line-height: 40px;
+}
+.modal-body  #phoneLogin #step-bg{
+    vertical-align: middle;
+    /*background-color: gray;*/
+    width: 418px;
+    height: 40px;
+    /*z-index: 2;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.modal-body  #phoneLogin #step-input{
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.modal-body .checkbox .forgot-password{
+	width: 60px;
+	height: 17px;
+	float: right;
+	margin-bottom: 30px;
+}
+.modal-body .checkbox .styled{
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right:10px;
+}
+.modal-body .checkbox{
+	padding-top: 50px;
+}
+.modal-body .js-login-form .btn-block{
+	border: 0;
+    background: black;
+    color: white;
+    width: 101%;
+    height: 43px;
+}
+.modal-body .js-login-form .other-wrapper{
+	padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    color: #999;
+    border-bottom: 1px solid #DFDFDF;
+}
+.modal-body .js-login-form .other-wrapper a{
+	text-decoration: underline;
+}
+.modal-body .js-login-form #showTitle{
+	float: right;
+}
+.modal-body .js-login-form .third-part-login{
+	font-size: 12px;
+    color: #999;
+    padding: 30px 0;
+    height: 32px;
+    line-height: 32px;
+}
+.modal-body .js-login-form .third-part-login .third-parts{
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right;
+}
+.modal-body .js-login-form .third-part-login .third-parts img{
+	margin-right: 10px;
+}
+.modal-body{
+	
+}

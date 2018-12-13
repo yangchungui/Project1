@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/shopping.css"/>
+</head>
+<body>
+	<div class="goods">
+		<div class="left">
+			<div id="imgs-top"><!--<img src="img/1 (4).jpg"/>-->
+				<div id="smallBox"></div>
+				<div id="bigBox"></div>
+			</div>
+			<ul id="imgList">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="right">
+			<p class="font">Samsonite/新秀丽李易峰同款拉杆箱登机箱全球款新品质感科技前开口28英寸旅行箱飞机轮 DC0</p>
+			<span class="small">
+				<span>EVOA</span>
+				<span>·····(0.0)</span>
+			</span>
+			<p class="small-font">明星同款 前开口设计 创新减震轮</p>
+			<span class="price">
+				<span>￥3980.00</span>
+				<span class="er">手机购买<span><img class="ma" src="img/er.png" alt="二维码" /></span></span>
+			</span>
+			<h5 class="under"><hr/></h5>
+			<div class="color">
+				<p>颜色</p>
+				<button type="button" id="btn-black" class="btn0"></button>
+				<button type="button" id="btn-pink" class="btn0"></button>
+				<button type="button" id="btn-grey" class="btn0"></button>
+			</div>
+			<div class="size">
+				<p>尺寸</p>
+				<button type="button" id="btn1" class="btn1">20英寸</button>
+				<button type="button" id="btn1" class="btn1">25英寸</button>
+				<button type="button" id="btn1" class="btn1">28英寸</button>
+			</div>
+			<div class="num1">
+				<span>数量</span>
+				<input type="number" id="num1" value="1" />
+			</div>
+			<div class="select">
+				<button type="button" id="btn2" class="btn2">加入购物车</button>
+				<button type="button" id="btn2" class="btn2">立即选购</button>
+			</div>
+			<p class="small-font">需要帮助？您可以 联系在线客服 或 致电：4008-870-566</p>
+			<h5><hr/></h5>
+			<p class="common">
+				<span><img src=""/>添加至收藏</span>
+				<span>分享：<img src="" alt="" /><img src=""/></span>
+			</p>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.1.10.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/firstTool.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+//	放大镜
+	let lis= $("#imgList").children;
+//	遍历li
+	for(let i=0; i<lis.length; i++){
+//		添加点击事件
+		lis[i].onclick = function(){
+//			获取当前图片的src
+			let bgImg = getStyle(this,"backgroundImage");
+			$("#imgs-top").style.backgroundImage = bgImg;
+			$("#bigBox").style.backgroundImage = bgImg;
+		}
+	}
+	
+	
+//	按钮点击事件
+	function dj0(dom) {
+        var collection = document.getElementsByClassName("btn0");
+        jQuery.each(collection, function () {
+            jQuery(this).css("backgroundColor","");
+        });
+        jQuery(dom).css("backgroundColor","black");
+    }
+
+	let btn0=document.getElementsByClassName("btn0");
+	for(let i=0;i<btn0.length;i++){
+		btn0[i].onclick=function(){
+			dj0(this);
+		}
+	}
+
+	function dj1(dom) {
+        var collection = document.getElementsByClassName("btn1");
+        jQuery.each(collection, function () {
+            jQuery(this).css({"backgroundColor":"","color":"black"});
+        });
+        jQuery(dom).css({"backgroundColor":"black","color":"white"});
+    }
+
+	let btn1=document.getElementsByClassName("btn1");
+	for(let i=0;i<btn1.length;i++){
+		btn1[i].onclick=function(){
+			dj1(this);
+		}
+	}
+//	
+	function dj2(dom) {
+        var collection = document.getElementsByClassName("btn2");
+        jQuery.each(collection, function () {
+            jQuery(this).css({"backgroundColor":"","color":"black"});
+        });
+        jQuery(dom).css({"backgroundColor":"black","color":"white"});
+    }
+
+	let btn2=document.getElementsByClassName("btn2");
+	for(let i=0;i<btn2.length;i++){
+		btn2[i].onclick=function(){
+			dj2(this);
+		}
+	}
+	
+	
+	
+	//放大镜跟着鼠标走；
+	window.onload=function(){
+		$('#imgs-top').onmousemove=function(event){
+			let ev = event || window.event;
+			//1、数据（放大镜的left和top）
+			let left1=ev.pageX-$('#imgs-top').offsetLeft-50;
+			let top1=ev.pageY-$('#imgs-top').offsetTop-40;
+			let w=$('#imgs-top').offsetWidth-$('#smallBox').offsetWidth;
+			let h=$('#imgs-top').offsetHeight-$('#smallBox').offsetHeight;
+			if(left1<=0){
+				left1=0;
+			}else if(left1>=w){
+				left1=w;
+			}
+			if(top1<=0){
+				top1=0;
+			}else if(top1>=h){
+				top1=h;
+			}
+			
+			//2、外观
+			$('#smallBox').style.left=left1+'px';
+			$('#smallBox').style.top=top1+'px';
+			
+			$('#bigBox').style.backgroundPosition=(-1*left1)+'px '+(-1*top1)+'px';//放大几倍乘以几
+		}
+		$('#imgs-top').onmouseover=function(){
+			$('#smallBox').style.display='block';
+			$('#bigBox').style.display='block';
+		}
+		$('#imgs-top').onmouseout=function(){
+			$('#smallBox').style.display='none';
+			$('#bigBox').style.display='none';
+		}
+	}
+	
+	function getStyle(obj,attr){
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		}else{
+			return window.getComputedStyle(obj,false)[attr];
+		}
+	}
+</script>
+</html>

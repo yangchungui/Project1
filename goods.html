@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/goods.css"/>
+</head>
+<body>
+	<div class="first">
+		<div class="head_con tt">
+			<a href="#"><img src="img/logo-white.png"/></a>
+		</div>
+		<div class="inpu tt">
+			<input type="text" name="" id="" placeholder="搜索" />
+			<input type="image" src="img/1 (12).png" id="img"/>
+		</div>
+		<div class="head_topright tt">
+			<a href="" >请登录: </a>
+			<a href="input.html" class="deng">登陆 </a>|
+			<a href="inputad.html">注册 </a>
+		</div>
+		<div class="welcomeBox tt">
+			欢迎您：<span class="usernameSpan"></span>
+			<input id="btnOut" type="button" value="注销"  class="btnOut"/>
+			<a href="#"><img class="imgs" src="img/1 (11).png" alt="收藏" /> </a>
+			<a href="go-car.html"><img src="img/1 (22).png" /></a>
+		</div>
+	</div>
+	<div class="fixed-first"></div>
+	<div class="box">
+		<a href="#">
+			<img class="imgs" src="img/1 (10).jpg"/>
+			<p>Samsonite/新秀丽李易峰同款拉杆箱登机箱全球款新品质感科技前开口20英寸旅行箱飞机轮 DC0</p>
+			<h5>EVOA</h5>
+			<h5>¥ 3,180.00</h5>
+		</a>
+	</div>
+	<div class="Bottom">
+	</div>
+</body>
+</html>
+<script src="js/jquery.1.10.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$.get("goodsAndShoppingCart/getGoodsList.php",function(data){
+			var arr=JSON.parse(data);
+//			console.log(data);
+			/*$.each(json,function(index,item)
+			里面的index代表当前循环到第几个索引，
+			item表示遍历后的当前对象，
+			比如json数据为：
+			[{"name":"a"},{"name":"b"},{"name":"c"}]
+			使用foreach遍历后，
+			index,item 依次为，
+			0，{"name":"a"}
+			1，{"name":"b"}
+			2，{"name":"c"}*/
+			$.each(arr, function(index,obj){
+				var aTagName=$('<a></a>');
+				aTagName.appendTo($(".box"));
+				
+//				var divClassName=$('<div></div>')
+				
+				var imgTagName=$("<img class='imgs' src='goodsAndShoppingCart/img/"+obj.goodsImg+".jpg'/>");
+				imgTagName.appendTo(aTagName);
+				var imgTagName=$("<p>Samsonite/新秀丽李易峰同款拉杆箱登机箱全球款新品质感科技前开口20英寸旅行箱飞机轮 DC0</p>");
+				imgTagName.appendTo(aTagName);
+				var imgTagName=$("<h5>EVOA</h5>");
+				imgTagName.appendTo(aTagName);
+				var imgTagName=$("<h5>¥ 3,180.00</h5>");
+				imgTagName.appendTo(aTagName);
+			});
+			
+		});
+	});
+	
+	
+	$(function(){
+		$(".Bottom").load("Bottom.html");
+	})
+	
+	
+	
+</script>

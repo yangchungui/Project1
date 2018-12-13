@@ -1,0 +1,65 @@
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+h3{font-weight: normal;}
+img {
+	border: 0;
+}
+ul{list-style: none;}
+input {
+	display: inline-block;
+}
+body{background-color: white;}
+#box{
+	width: 580px;
+}
+.box .modal-content #gridSystemModalLabel{
+	font-size: 24px;
+    text-align: center;
+    color: #222;
+}
+.box .modal-content .modal-header{
+	height: 156px;
+}
+.box .modal-content .modal-header .step-item-process .steps-item-icon{
+	position: absolute;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    left: 100px;
+}
+.box .modal-content .modal-header .step-item-process{
+	text-align: center;    position: relative;
+}
+.box .modal-content .modal-body .block-label{
+	font-size: 16px;
+    color: #222;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.box .modal-content .modal-body{
+	height: 600px;
+}
+.box .modal-content .modal-header .step-item-process .steps-item-title{
+    padding-bottom: 10px;
+	border-bottom: 2px solid black;
+	padding-left: 28px;
+}
+.box .modal-content .modal-body .form-group #checkbox{
+	padding-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #222;
+}

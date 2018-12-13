@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/go-car.css"/>
+</head>
+<body>
+	
+	<div class="main">
+		<div class="main-top">
+			<h3>我的购物车(1)</h3>
+		</div>
+		<div class="main-middle">
+			<h4>商品信息</h4>
+			<div class="main-content">
+				<div class="left">
+					<button>√ </button>
+					<div class="imgs"><img src="img/1 (6).jpg"/></div>
+				</div>
+				<div class="center">
+					<p class="font">Samsonite/新秀丽明星同款 铝镁合金登机行李箱20英寸万向轮拉杆箱男女 DB3</p>
+					<p class="small-font">RAYDIEN</p>
+					<p class="weight">颜色：<span>黑色  </span></p>
+					<p class="weight">尺寸：<span>20英寸</span></p>
+					<p class="log"><button class="xlog"><img src="img/200.png"/></button> | <button class="blog"><img src="img/201.jpg"/></button></p>
+				</div>
+				<div class="right">
+					<button class="xlog">￥4980.00</button>
+					<button class="blog"><img src="img/202.jpg"/></button>
+				</div>
+			</div>
+			<h3>请选择：</h3>
+			<div class="sumsum">
+				<input type="button" id="remove" class="butbut1" value="-"/>
+				<input type="text"  id="num" class="texttext1" value="0" />
+				<input type="button" id="add" class="butbut1" value="+" />
+				<input type="button" id="add2" class="butbut2" value="添加" />
+				<input type="button"  id="zongshu" class="butbut2" value="总数：" />
+				<input type="text"  id="num2" class="texttext1" value="0" />
+			</div>
+			<h3>合计：</h3>
+			<div class="sumprice">
+				<input type="button"  id="price" class="butbut" value="单价：4980.00" />
+				<input type="button"  id="zongjia" class="butbut" value="总价：" />
+				<input type="text"  id="num3" class="texttext" value="0" />
+			</div>	
+				
+			
+			
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery.1.10.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".Top").load("Top.html");
+		$(".Bottom").load("Bottom.html");
+	});	
+	function $(id){
+		return document.getElementById(id);
+	}
+	
+	$("remove").onclick=function(){
+		var num=$("num").value;
+		if(num>0){
+			num--;
+			$("num").value=num;
+		}
+	}
+	
+	$("add").onclick=function(){
+		var num=$("num").value;
+		num++;
+		$("num").value=num;
+		
+	}
+	$("add2").onclick=function(){
+		$("num2").value=parseInt($("num2").value)+parseInt($("num").value);
+	}
+	$("zongjia").onclick=function(){
+		$("num3").value=4980.00 * parseFloat($("num2").value);
+	}
+</script>

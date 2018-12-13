@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/input.css"/>
+<link rel="stylesheet" type="text/css" href="css/inputad.css"/>
+<title></title>
+</head>
+<body>
+<div class="box" id="box">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title" id="gridSystemModalLabel">注册</h4>
+			<div class="divider">
+				<span class="divider-inner-text">
+					<span><hr/></span>
+					<img class="divider-logo" src="img/1 (18).png" alt="logo"/>
+					<span><hr/></span>
+				</span>
+			</div>
+			<div class="step">
+				<div class="step-item-process">
+					<div class="steps-item-tail"></div>
+					<div class="steps-item-icon">
+						<span class="steps-icon">1</span>
+					</div>
+					<div class="steps-item-title">验证手机号/设置密码</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-body" id="modal-body">
+			<div class="block-label">验证手机号</div>
+			<div class="form-wrapper">
+				<form class="js-login-form" name="loginForm">
+					<div id="phoneLogin">
+						<div class="form-group">
+							
+							<input type="text" class="material-input stepPhoneStart" name="phone" id="stepPhoneStart" placeholder="*手机号码"/>
+							<span id="userSpan"></span>
+							
+							<fieldset id="stepPhone1" class="stepPhone1">
+								<legend>*手机号码</legend>
+								<input type="text" class="material-input stepPhone" name="phone" id="stepPhone"/><span id="stepPhoneTrue" style="display:inline-block;width: 110px;height: 18px;
+    position: absolute;top: 24px;left: 135px;"></span>
+							</fieldset>
+						</div>
+						<div class="verification-slider">
+							<div class="movebg">
+								请按住滑块，拖至最后
+							</div>
+							<div id="step-bg">
+								<input id="step-input" type="image" src="img/slider-handler-normal.png"/>
+							</div>
+							<div class="slider-desc">请按住滑块，拖至最后</div>
+						</div>
+						<div class="form-group">
+							
+							<input type="text" class="material-input stepPhoneStart" name="phone" id="stepPhoneStart" placeholder="*输入动态验证码"/>
+							<fieldset id="stepPhone2" class="stepPhone1">
+								<legend>*输入动态验证码</legend>
+								<input type="text" class="material-input stepPhone" name="phone" id="stepPhone11"/><span id="stepPhoneTrue1" style="display:inline-block;width: 130px;height: 18px;
+    position: absolute;top: 24px;left: 135px;"></span>
+							</fieldset>
+							
+							<div class="input-group">
+								<span class="input-group-btn">
+									<button class="btn-get-code" type="button">发送验证码</button>
+								</span>
+							</div>
+						</div>	
+						<div class="block-label">设置登录密码</div>
+						
+						<div class="form-group">
+							<input type="text" class="material-input stepPhoneStart" name="phone" id="stepPhoneStart" placeholder="*设置登录密码6-8个字符，包含数字大小写字母"/>
+							<fieldset id="stepPhone3" class="stepPhone1">
+								<legend>*设置登录密码6-8个字符，包含数字大小写字母</legend>
+								<input type="text" class="material-input stepPhone" name="phone" id="userpass"/><span id="stepPhoneTrue2" style="display:inline-block;width: 205px;height: 18px;
+    position: absolute;top: 24px;left: 135px;"></span>
+							</fieldset>
+						</div>
+						
+						
+						<div class="form-group">
+							<input type="text" class="material-input stepPhoneStart" name="phone" id="userpass1" placeholder="*确认登录密码"/>
+							<fieldset id="stepPhone4" class="stepPhone1">
+								<legend>*确认登录密码</legend>
+								<input type="text" class="material-input stepPhone" name="phone" id="userpass2"/><span id="stepPhoneTrue3" style="display:inline-block;width: 205px;height: 18px;
+    position: absolute;top: 24px;left: 135px;"></span>
+							</fieldset>
+						</div>
+						
+						
+						
+						<div class="form-group">
+							<div class="checkbox" id="checkbox">
+								<input type="checkbox" class="styled" id="protocol3" name="keep-login">
+								<label for="protocol3" style="display: inline-block;">接受新秀丽条款和隐私</label>
+							</div>
+						</div>
+						<button type="button" class="btn btn-block" id="btn-block">保存</button>
+					</div>
+					
+					<input type="hidden" id="login-redirecrt-url" value="/cart"/>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery.1.10.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/firstTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/input.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	jQuery("#stepPhone").blur(function(){
+		var reg = /^[0-9]{11}$/;
+		var str = this.value;
+		if(reg.test(str)==true){
+			$("#stepPhoneTrue").innerHTML = "√";
+		}else{
+			$("#stepPhoneTrue").innerHTML = "X，请输入11位数字";
+		}		
+	}); 
+	
+	jQuery(".btn-get-code").click(function(){
+		var reg =$("#stepPhone11").value;
+		var str =$(".movebg")[0].innerHTML;
+		if(reg==str){
+			$("#stepPhoneTrue1").innerHTML = "√";
+		}else{
+			$("#stepPhoneTrue1").innerHTML = "X，请输入正确的验证码";
+		}		
+	}); 
+	
+	jQuery("#userpass").blur(function(){
+		var reg =/^[a-z0-9_-]{6,18}$/;
+		var str = this.value;
+		if(reg.test(str)==true){
+			$("#stepPhoneTrue2").innerHTML = "√";
+		}else{
+			$("#stepPhoneTrue2").innerHTML = "X，请输入6-18位数字或字母或下划线";
+		}		
+	}); 
+	
+	jQuery("#userpass2").blur(function(){
+		var reg =$("#userpass").value;
+		var str = this.value;
+		if(reg==str){
+			$("#stepPhoneTrue3").innerHTML = "√";
+		}else{
+			$("#stepPhoneTrue3").innerHTML = "X，请输入一致的密码";
+		}		
+	}); 
+	
+	window.onload=function(){
+	$('#stepPhone').onblur=function(){
+		let xml=new XMLHttpRequest();
+		let str="stepPhone="+$('#stepPhone').value+"&userpass="+$('#userpass').value;
+		xml.open('get','inputad.php?'+str,true);
+		xml.onreadystatechange=function(){
+			if(xml.readyState==4&&xml.status==200){
+				if(xml.responseText=='0'){
+					$('#userSpan').style.color='green';
+					$('#userSpan').innerHTML='该手机号码可以注册';
+				}else{
+					$('#userSpan').style.color='red';
+					$('#userSpan').innerHTML='该手机号码不可以注册';
+				}
+			}
+		}
+		xml.send();
+	}
+	
+	$('#btn-block').onclick=function(){
+		let xml=new XMLHttpRequest();
+		let str="stepPhone="+$('#stepPhone').value+"&userpass="+$('#userpass').value;
+		xml.open('get','inputad1.php?'+str,true);
+		xml.onreadystatechange=function(){
+			if(xml.readyState==4&&xml.status==200){
+				if(xml.responseText=='0'){
+					$('#userSpan').style.color='red';
+					$('#userSpan').innerHTML='该手机号码注册失败';
+				}else{
+					$('#userSpan').style.color='green';
+					$('#userSpan').innerHTML='该手机号码注册成功';
+					//成功两秒后跳转
+					setTimeout(function(){
+						location.href='input.html';
+					},2000);
+					
+				}
+			}
+		}
+		xml.send();
+	}
+	
+	
+	//遍历每个点击事件
+	var btnArray = document.getElementsByClassName('stepPhoneStart');
+	for (var i = 0; i < btnArray.length; i++) {
+	    btnArray[i].onclick = (function close(j) {
+	        return function () {
+	         	$('.stepPhoneStart')[j].style.display='none';
+				$('.stepPhone1')[j].style.display='block';
+	        }
+		})(i);
+	}
+}
+</script>
+</html>

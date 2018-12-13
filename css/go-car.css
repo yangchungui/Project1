@@ -1,0 +1,170 @@
+
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+h3{font-weight: normal;}
+img {
+	border: 0;
+}
+ul{list-style: none;}
+input {
+	display: inline-block;
+}
+.main{
+	width: 883px;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+.main .main-top{
+	width: 734px;
+	height:123px;
+	line-height: 123px;
+	border-bottom: 1px solid gainsboro;
+}
+.main .main-top h3{font-weight: 600;font-size: 22px;}
+.main .main-middle{
+	width: 734px;
+	height: 650px;
+}
+.main .main-middle h4{
+	height: 102px;
+	font-size: 16px;
+	line-height: 102px;
+}
+.main .main-content{width: 734px;
+	    height: 184px;
+	    border-bottom: 1px solid gainsboro;}
+.main .main-content .left{
+	width: 168px;
+	height: 148px;
+	float: left;
+}
+.main .main-content .left button{
+	width: 18px;
+	height: 18px;
+	margin-top: 55px;
+	float: left;
+	padding-left: 2px;
+	font-size: 12px;
+	font-weight: 900;
+	text-align: center;
+}
+.main .main-content .left .imgs{
+	width: 90px;
+	height: 114px;
+	margin-left: 28px;
+	margin-top: 15px;
+	float: left;
+}
+.main .main-content .left img{
+	width: 90px;
+	height: 114px;
+}
+.main .main-content .center{
+	width: 230px;
+	height: 148px;
+	float: left;
+}
+.main .main-content .center .font{
+	width: 230px;
+	height: 64px;
+	line-height: 21px;
+	font-weight: 400;
+	font-size: 14px;
+}
+.main .main-content .center .small-font{
+	font-size: 12px;
+    color: #969696;
+    line-height: 20px;
+    height: 20px;
+    margin: 5px 0;
+}
+.main .main-content .center .weight{
+	font-size: 12px;
+    color: #222;
+    line-height: 20px;
+    height: 20px;
+    float: left;
+}
+.main .main-content .center .log{
+	padding-top: 6px;
+	clear: both;
+	height: 21px;
+}
+.main .main-content .center .log .blog{
+	margin-left: 25px;
+}
+.main .main-content .center button,.main .main-content .right button{
+	background-color: white;
+	border: 0;
+	outline: none;
+}
+.main .main-content .center button{
+	height: 20px;
+	width:28px ;
+	line-height: 20px;
+	margin-right: 25px;
+}
+.main .main-content .center button img{
+	height: 12px;
+	width:12px ;
+}
+.main .main-content .right{
+	width: 300px;
+	height: 148px;
+	float: left;
+}
+.main .main-content .right .xlog{
+	float: right;
+}
+.main .main-content .right .blog{
+	float:right;
+	margin-top: 125px;
+    margin-right: -77px;
+}
+h3{
+	clear: both;
+	float: left;
+}
+.sumsum{
+	width: 300px;
+	height: 50px;
+	float: right;
+}
+.sumprice{
+	width:318px;
+	height: 50px;
+	float: right;
+	border-bottom: 1px solid gainsboro;
+}
+input{
+	background: black;
+	color: white;
+	border: 0;
+	outline: 0;
+	height: 24px;
+}
+.butbut{
+	width: 94px;
+}
+.butbut1{
+	width: 30px;
+	font-size: 18px;
+}
+.butbut2{
+	width: 60px;
+}
+.texttext{
+	width: 100px;
+	text-align: center;
+}
+.texttext1{
+	text-align: center;
+	width: 36px;
+}
